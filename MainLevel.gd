@@ -12,17 +12,17 @@ func _ready():
 	var temp = Vector2(32,32)
 	for i in range(7):
 		var bucketscene = bucket.instantiate()
-		temp = Vector2((rng.randi_range(0,12)*64)+32,(rng.randi_range(0,5)*64)+32)
-		while(not randomPositions.has(temp)):
-			print(str(temp) + "1st")
-			temp = Vector2((rng.randi_range(0,6)*64)+32,(rng.randi_range(0,5)*64)+32)
-			if(not randomPositions.has(temp)):
-				bucketscene.position = temp
-				print(str(temp) + "2nd")
-				randomPositions.append(temp)
 		bucketscene.colorIndex = i
 		bucketscene._setup()
+		temp = Vector2((rng.randi_range(0,12)*64)+32,(rng.randi_range(0,5)*64)+32)
+		while(len(randomPositions) != 7):
+			temp = Vector2((rng.randi_range(0,6)*64)+32,(rng.randi_range(0,5)*64)+32)
+			if(not randomPositions.has(temp)):
+				randomPositions.append(temp)
+		bucketscene.position = randomPositions[i]
 		add_child(bucketscene)
+	#print(randomPositions)
+	#print(len(randomPositions))
 	#$RedPaintBucket.position = Vector2(0,0)
 
 

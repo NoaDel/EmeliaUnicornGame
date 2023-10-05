@@ -20,4 +20,4 @@ shape = SubResource("RectangleShape2D_akr0w")
 scale = Vector2(0.5, 0.5)
 texture = SubResource("AtlasTexture_dpmny")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

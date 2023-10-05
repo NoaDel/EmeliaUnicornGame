@@ -6,7 +6,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vcpc"]
 
 [node name="PlayerArea2D" type="Area2D" groups=["Player"]]
-visible = false
 script = ExtResource("1_82lot")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
