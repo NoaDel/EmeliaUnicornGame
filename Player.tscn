@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhiayyx6a8uhc"]
+
+[ext_resource type="Script" path="res://GridSystem.gd" id="1_82lot"]
+[ext_resource type="Texture2D" uid="uid://dbunj8rin248i" path="res://UnicornImage.png" id="2_gie0l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vcpc"]
+
+[node name="PlayerArea2D" type="Area2D" groups=["Player"]]
+visible = false
+script = ExtResource("1_82lot")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gie0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.4, 2.4)
+shape = SubResource("RectangleShape2D_0vcpc")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
